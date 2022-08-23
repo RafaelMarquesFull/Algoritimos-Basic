@@ -1,0 +1,25 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+  var tela = document.querySelector('canvas');
+  var pincel = tela.getContext('2d');
+
+  pincel.fillStyle = 'grey';
+  pincel.fillRect(0, 0, 600, 400);
+
+  function desenhaCirculo(evento) {
+    // essas variaveis passam as posiçoes de clique subtraido aparteonde não ha canvas
+    var x = evento.pageX - tela.offsetLeft;
+    var y = evento.pageY - tela.offsetTop;
+
+    pincel.fillStyle = 'blue';
+    pincel.beginPath();
+    pincel.arc(x, y, 10, 0, 2 * 3.14);
+    pincel.fill();
+
+    //esse comando vai exibir onde foi clicado na tela
+    console.log(x + ',' + y);
+  }
+  //onclique  e uma função ou metodo de escuta de clique
+  tela.onclick = desenhaCirculo;
+</script>

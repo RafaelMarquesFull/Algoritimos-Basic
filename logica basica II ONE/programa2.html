@@ -1,0 +1,84 @@
+<input />
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+  function desenhaQuadrado(x, y, cor) {
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = cor;
+    pincel.fillRect(x, y, 10, 10);
+    pincel.fillStroke = 'black';
+    pincel.strokeRect(x, y, 10, 10);
+  }
+  var x = 0;
+  while (x < 600) {
+    desenhaQuadrado(x, 0, 'blue');
+    desenhaQuadrado(x, 100, 'blue');
+
+    x = x + 10;
+  }
+  function letraAprimeiro() {
+    var x = 55;
+    while (x < 95) {
+      desenhaQuadrado(x, 65, 'black');
+
+      x = x + 10;
+    }
+
+    desenhaQuadrado(70, 20, 'black');
+    desenhaQuadrado(60, 35, 'black');
+    desenhaQuadrado(50, 50, 'black');
+    desenhaQuadrado(40, 65, 'black');
+    desenhaQuadrado(30, 80, 'black');
+
+    desenhaQuadrado(80, 35, 'black');
+    desenhaQuadrado(90, 50, 'black');
+    desenhaQuadrado(100, 65, 'black');
+    desenhaQuadrado(110, 80, 'black');
+  }
+
+  function letraNsegundo(params) {
+    var y = 20;
+    while (y < 90) {
+      desenhaQuadrado(130, y, 'black');
+
+      y = y + 10;
+    }
+
+    desenhaQuadrado(140, 35, 'black');
+    desenhaQuadrado(150, 50, 'black');
+    desenhaQuadrado(160, 65, 'black');
+    desenhaQuadrado(170, 80, 'black');
+
+    var y = 20;
+    while (y < 90) {
+      desenhaQuadrado(180, y, 'black');
+
+      y = y + 10;
+    }
+  }
+  function letraAterceiro() {
+    desenhaQuadrado(240, 20, 'black');
+    desenhaQuadrado(230, 35, 'black');
+    desenhaQuadrado(220, 50, 'black');
+    desenhaQuadrado(210, 65, 'black');
+    desenhaQuadrado(200, 80, 'black');
+
+    desenhaQuadrado(250, 35, 'black');
+    desenhaQuadrado(260, 50, 'black');
+    desenhaQuadrado(270, 65, 'black');
+    desenhaQuadrado(280, 80, 'black');
+
+    var x = 225;
+    while (x < 265) {
+      desenhaQuadrado(x, 65, 'black');
+
+      x = x + 10;
+    }
+  }
+  letraAprimeiro();
+  letraNsegundo();
+  letraAterceiro();
+</script>

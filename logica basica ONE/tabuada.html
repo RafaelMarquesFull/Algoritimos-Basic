@@ -1,0 +1,19 @@
+<meta charset="UTF-8" />
+<script>
+  function pulaLinha() {
+    document.write('<br><br>');
+  }
+
+  function mostra(instrucao) {
+    document.write(instrucao);
+    pulaLinha();
+  }
+  var input = parseInt(prompt('Digite qual tabuada desja exibir'));
+
+  mostra('Tabuada de: ' + input);
+
+  for (var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+    mostra(input + ' x ' + multiplicador + ': ' + multiplicador * input);
+  }
+  mostra('FIM');
+</script>
